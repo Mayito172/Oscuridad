@@ -1,0 +1,198 @@
+Public Class Form1
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim htmlString As String = "<!DOCTYPE html>" & vbCrLf & _
+                                  "<html lang=""es"">" & vbCrLf & _
+                                  "<head>" & vbCrLf & _
+                                  "    <meta charset=""UTF-8"">" & vbCrLf & _
+                                  "    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">" & vbCrLf & _
+                                  "    <title>MarioGamer - Mundo Gamer</title>" & vbCrLf & _
+                                  "    <meta name=""description"" content=""El sitio web oficial de MarioGamer, un apasionado jugador de Free Fire, Brawl Stars, FIFA 2025 y Clash Royale. ¡Sigue mis logros, explora mi galería y únete a la comunidad!"">" & vbCrLf & _
+                                  "    <meta name=""keywords"" content=""MarioGamer, juegos, gaming, Free Fire, Brawl Stars, FIFA 2025, Clash Royale, logros, comunidad gamer, streaming"">" & vbCrLf & _
+                                  "    <meta name=""author"" content=""MarioGamer"">" & vbCrLf & _
+                                  "    <link rel=""icon"" href=""favicon.ico"" type=""image/x-icon"">" & vbCrLf & _
+                                  "    <link rel=""preconnect"" href=""https://fonts.googleapis.com"">" & vbCrLf & _
+                                  "    <link rel=""preconnect"" href=""https://fonts.gstatic.com"" crossorigin>" & vbCrLf & _
+                                  "    <link href=""https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap"" rel=""stylesheet"">" & vbCrLf & _
+                                  "    <style>" & vbCrLf & _
+                                  "        :root {" & vbCrLf & _
+                                  "            --primary-color-light: #00ffe7;" & vbCrLf & _
+                                  "            --primary-color-dark: #00b3a1;" & vbCrLf & _
+                                  "            --secondary-color-light: #fc466b;" & vbCrLf & _
+                                  "            --secondary-color-dark: #3f5efb;" & vbCrLf & _
+                                  "            --background-gradient-start: #1f1c2c;" & vbCrLf & _
+                                  "            --background-gradient-end: #928dab;" & vbCrLf & _
+                                  "            --card-background: rgba(0, 0, 0, 0.6);" & vbCrLf & _
+                                  "            --text-color-primary: #fff;" & vbCrLf & _
+                                  "            --text-color-secondary: #aaa;" & vbCrLf & _
+                                  "            --box-shadow-light: rgba(255, 255, 255, 0.2);" & vbCrLf & _
+                                  "            --box-shadow-primary: #00e6f6;" & vbCrLf & _
+                                  "            --footer-background: #111;" & vbCrLf & _
+                                  "            --header-padding: 70px 30px;" & vbCrLf & _
+                                  "            --section-padding: 50px 20px;" & vbCrLf & _
+                                  "            --border-radius-small: 10px;" & vbCrLf & _
+                                  "            --border-radius-medium: 15px;" & vbCrLf & _
+                                  "            --transition-default: color 0.3s ease-in-out, transform 0.3s ease-in-out;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        body {" & vbCrLf & _
+                                  "            margin: 0;" & vbCrLf & _
+                                  "            font-family: 'Segoe UI', sans-serif;" & vbCrLf & _
+                                  "            background: linear-gradient(to bottom right, var(--background-gradient-start), var(--background-gradient-end));" & vbCrLf & _
+                                  "            color: var(--text-color-primary);" & vbCrLf & _
+                                  "            overflow-x: hidden;" & vbCrLf & _
+                                  "            line-height: 1.6;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        header {" & vbCrLf & _
+                                  "            background: linear-gradient(to right, var(--secondary-color-light), var(--secondary-color-dark));" & vbCrLf & _
+                                  "            padding: var(--header-padding);" & vbCrLf & _
+                                  "            text-align: center;" & vbCrLf & _
+                                  "            color: var(--text-color-primary);" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        header h1 {" & vbCrLf & _
+                                  "            font-size: 4em;" & vbCrLf & _
+                                  "            margin: 0;" & vbCrLf & _
+                                  "            animation: fadeIn 1.5s ease-in-out;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        header p.intro {" & vbCrLf & _
+                                  "            font-size: 1.8em;" & vbCrLf & _
+                                  "            margin-top: 10px;" & vbCrLf & _
+                                  "            animation: fadeInUp 1.5s ease-in-out;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        nav {" & vbCrLf & _
+                                  "            display: flex;" & vbCrLf & _
+                                  "            justify-content: center;" & vbCrLf & _
+                                  "            flex-wrap: wrap;" & vbCrLf & _
+                                  "            background-color: rgba(0, 0, 0, 0.7);" & vbCrLf & _
+                                  "            padding: 14px;" & vbCrLf & _
+                                  "            position: sticky;" & vbCrLf & _
+                                  "            top: 0;" & vbCrLf & _
+                                  "            z-index: 10;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        nav a {" & vbCrLf & _
+                                  "            color: var(--primary-color-light);" & vbCrLf & _
+                                  "            text-decoration: none;" & vbCrLf & _
+                                  "            font-weight: bold;" & vbCrLf & _
+                                  "            margin: 0 15px;" & vbCrLf & _
+                                  "            transition: var(--transition-default);" & vbCrLf & _
+                                  "            padding: 8px 12px;" & vbCrLf & _
+                                  "            border-radius: var(--border-radius-small);" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        nav a:hover {" & vbCrLf & _
+                                  "            color: var(--text-color-primary);" & vbCrLf & _
+                                  "            background-color: rgba(255, 255, 255, 0.1);" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        .section {" & vbCrLf & _
+                                  "            padding: var(--section-padding);" & vbCrLf & _
+                                  "            max-width: 1100px;" & vbCrLf & _
+                                  "            margin: auto;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        .card {" & vbCrLf & _
+                                  "            background-color: var(--card-background);" & vbCrLf & _
+                                  "            border-radius: var(--border-radius-medium);" & vbCrLf & _
+                                  "            padding: 30px;" & vbCrLf & _
+                                  "            box-shadow: 0 0 20px var(--box-shadow-light);" & vbCrLf & _
+                                  "            margin-bottom: 30px;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        .game-info {" & vbCrLf & _
+                                  "            margin-top: 20px;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        .game-info h3 {" & vbCrLf & _
+                                  "            color: var(--primary-color-light);" & vbCrLf & _
+                                  "            margin-bottom: 10px;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        .gallery {" & vbCrLf & _
+                                  "            display: grid;" & vbCrLf & _
+                                  "            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));" & vbCrLf & _
+                                  "            gap: 20px;" & vbCrLf & _
+                                  "            margin-top: 20px;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        .gallery img {" & vbCrLf & _
+                                  "            width: 100%;" & vbCrLf & _
+                                  "            border-radius: var(--border-radius-small);" & vbCrLf & _
+                                  "            box-shadow: 0 0 15px var(--box-shadow-primary);" & vbCrLf & _
+                                  "            transition: var(--transition-default);" & vbCrLf & _
+                                  "            display: block;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        .gallery img:hover {" & vbCrLf & _
+                                  "            transform: scale(1.05);" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        footer {" & vbCrLf & _
+                                  "            background: var(--footer-background);" & vbCrLf & _
+                                  "            text-align: center;" & vbCrLf & _
+                                  "            padding: 20px;" & vbCrLf & _
+                                  "            color: var(--text-color-secondary);" & vbCrLf & _
+                                  "            font-size: 0.9em;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        footer a {" & vbCrLf & _
+                                  "            color: var(--primary-color-light);" & vbCrLf & _
+                                  "            text-decoration: none;" & vbCrLf & _
+                                  "            transition: var(--transition-default);" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        footer a:hover {" & vbCrLf & _
+                                  "            color: var(--text-color-primary);" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        ul {" & vbCrLf & _
+                                  "            list-style-type: disc;" & vbCrLf & _
+                                  "            padding-left: 20px;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        li {" & vbCrLf & _
+                                  "            margin-bottom: 8px;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        @keyframes fadeIn {" & vbCrLf & _
+                                  "            from { opacity: 0; transform: translateY(-30px); }" & vbCrLf & _
+                                  "            to { opacity: 1; transform: translateY(0); }" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        @keyframes fadeInUp {" & vbCrLf & _
+                                  "            from { opacity: 0; transform: translateY(30px); }" & vbCrLf & _
+                                  "            to { opacity: 1; transform: translateY(0); }" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        .section#contacto ul {" & vbCrLf & _
+                                  "            list-style: none;" & vbCrLf & _
+                                  "            padding-left: 0;" & vbCrLf & _
+                                  "            display: flex;" & vbCrLf & _
+                                  "            justify-content: center;" & vbCrLf & _
+                                  "            gap: 20px;" & vbCrLf & _
+                                  "            margin-top: 20px;" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "        .section#contacto ul li a {" & vbCrLf & _
+                                  "            background-color: rgba(255, 255, 255, 0.1);" & vbCrLf & _
+                                  "            padding: 10px 20px;" & vbCrLf & _
+                                  "            border-radius: var(--border-radius-medium);" & vbCrLf & _
+                                  "        }" & vbCrLf & _
+                                  "    </style>" & vbCrLf & _
+                                  "</head>" & vbCrLf & _
+                                  "<body>" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "    <header>" & vbCrLf & _
+                                  "        <h1>MarioGamer <span aria-label=""controlador de videojuegos"">🎮</span></h1>" & vbCrLf & _
+                                  "        <p class=""intro"">Bienvenidos a mi rincón del entretenimiento y la diversión</p>" & vbCrLf & _
+                                  "        <p>¡Explora mis juegos favoritos, celebra mis logros y mucho más!</p>" & vbCrLf & _
+                                  "    </header>" & vbCrLf & _
+                                  "" & vbCrLf & _
+                                  "    <nav aria-label=""Menú principal"">" & vbCrLf & _
+                                  "        <a href=""#biografia"">Biografía</a>" & vbCrLf & _
+                                  "        <a href=""#juegos"">Juegos</a>" & vbCrLf & _
+                                  "        <a href=""#logros"">Logros</a>" & vbCr
